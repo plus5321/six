@@ -1,0 +1,56 @@
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\rohit> cd C:\Users\rohit\Desktop\dev
+PS C:\Users\rohit\Desktop\dev> git clone https://github.com/plus5321/three.git
+Cloning into 'three'...
+warning: You appear to have cloned an empty repository.
+PS C:\Users\rohit\Desktop\dev> git add in.html
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\rohit\Desktop\dev> git add a.html
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\rohit\Desktop\dev> git init
+Initialized empty Git repository in C:/Users/rohit/Desktop/dev/.git/
+PS C:\Users\rohit\Desktop\dev> git add a.html
+PS C:\Users\rohit\Desktop\dev> git add in.html
+PS C:\Users\rohit\Desktop\dev> git add b.html
+PS C:\Users\rohit\Desktop\dev> git commit -m "push 3f"
+[master (root-commit) b5ccad6] push 3f
+ 3 files changed, 3 insertions(+)
+ create mode 100644 a.html
+ create mode 100644 b.html
+ create mode 100644 in.html
+PS C:\Users\rohit\Desktop\dev> git log
+commit b5ccad67b4a915b02d9427e10c4462b488560e8a (HEAD -> master)
+Author: plus5321 <plusu5321@gmail.com>
+Date:   Sun Apr 23 18:07:23 2023 +0530
+
+    push 3f
+PS C:\Users\rohit\Desktop\dev> git branch
+* master
+PS C:\Users\rohit\Desktop\dev> git branch main
+PS C:\Users\rohit\Desktop\dev> git checkout main
+Switched to branch 'main'
+PS C:\Users\rohit\Desktop\dev> git remote add origin https://github.com/plus5321/three.git
+PS C:\Users\rohit\Desktop\dev> git remote -v
+origin  https://github.com/plus5321/three.git (fetch)
+origin  https://github.com/plus5321/three.git (push)
+PS C:\Users\rohit\Desktop\dev> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 317 bytes | 317.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/plus5321/three.git
+ * [new branch]      main -> main
+PS C:\Users\rohit\Desktop\dev> cd three
+PS C:\Users\rohit\Desktop\dev\three> git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 5 (delta 0), reused 5 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), 297 bytes | 14.00 KiB/s, done.
+From https://github.com/plus5321/three
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+PS C:\Users\rohit\Desktop\dev\three>
